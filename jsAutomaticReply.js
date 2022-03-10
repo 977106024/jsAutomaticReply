@@ -2,9 +2,9 @@ const reply = ()=>{
     return new Promise(resolve=>{
         setTimeout(()=>{
 
-            const button = document.querySelector('')
-            const input1 = document.querySelector('')
-            button.disabled = false
+            const button = document.querySelector('') //输入框
+            const input1 = document.querySelector('') //评论按钮
+            button.disabled = false //解开按钮禁用
 
             // 监听输入事件 触发点击
             input1.oninput = function() {
@@ -44,7 +44,7 @@ const fn = async()=>{
     await reply()
 }
 
-// 十分钟评论一次
+// n分钟评论4条
 setInterval(()=>{
     fn()
     console.log('16分钟到', new Date())
