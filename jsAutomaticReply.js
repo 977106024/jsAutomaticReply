@@ -14,7 +14,7 @@ const reply = ()=>{
                     console.log('评论！')
                     resolve()
                 }
-                , 1000)
+                , 25000)
 
             }
 
@@ -23,7 +23,7 @@ const reply = ()=>{
             const n = Math.floor(Math.random() * sendTextArr.length + 1) - 1;
             const text = sendTextArr[n]
 
-            // 模拟输入事件 像文本框中输入内容
+            // 模拟输入事件 向文本框中添加内容
             let evt1 = document.createEvent('HTMLEvents');
             evt1.initEvent('input', true, true);
             input1.value = text;
@@ -49,6 +49,6 @@ setInterval(()=>{
     fn()
     console.log('16分钟到', new Date())
 }
-, 60000 * 16)
+, 60000 * 20)
 
 fn()
